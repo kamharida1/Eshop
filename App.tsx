@@ -1,5 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { DataStore } from 'aws-amplify';
+import { ExpoSQLiteAdapter } from '@aws-amplify/datastore-storage-adapter/ExpoSQLiteAdapter';
+
+DataStore.configure({
+  storageAdapter: ExpoSQLiteAdapter
+});
 
 export default function App() {
   return (
